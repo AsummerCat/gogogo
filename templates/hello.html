@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试模板引擎</title>
+</head>
+<body>
+直接渲染
+<h1>{{ hello }}</h1>
+
+for循环
+<ul>
+{% for athlete in athlete_list %}
+    <li>{{ athlete }}</li>
+{% endfor %}
+</ul>
+
+反转
+<ul>
+{% for athlete in athlete_list reversed %}
+    <li>{{ athlete }}</li>
+{% endfor %}
+</ul>
+
+ifequal 判断
+<br/>
+{% ifequal 1 testNumber %}
+  testNumber=1
+{% endifequal %}
+<br/>
+
+{% ifnotequal 2 testNumber %}
+  testNumber不等于2
+{% endifnotequal %}
+<br/>
+
+{% ifequal section 'sitenews' %}
+    <h1>Site News</h1>
+{% else %}
+    <h1>No News Here</h1>
+{% endifequal %}
+<br/>
+<br/>
+
+过滤器
+<br/>
+转换小写&emsp;&emsp;输出: {{ hello|lower }}
+<br/>
+嵌套过滤 第一个字符大写 &emsp;&emsp;输出: {{ hello|first|upper }}
+<br/>
+{{ create_time | date:"Y-m-d H:i:s" }}
+{#{{ pub_date }}#}
+
+</body>
+</html>
