@@ -9,9 +9,6 @@ from django.http import HttpResponse
 """
 
 
-
-
-
 def hello(request):
     return HttpResponse("hello world ! ")
 
@@ -37,4 +34,3 @@ def helloHtml(request):
 def index(request):
     context = {}
     return render(request, 'test111.html', context)
-

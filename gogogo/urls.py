@@ -15,14 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import gogogo.helloWord as gogo
-
-# from gogogo.helloWord import hello
+from gogogo import helloWord, dbTest
 
 urlpatterns = [
     # 路径名称 ,路径方法,路径名称 用来反向显示
     path('admin/', admin.site.urls),
-    path('hello/', gogo.hello, name='hello'),
-    path('', gogo.index, name=''),
-    path('helloHtml/', gogo.helloHtml, name='helloHtml')
+    path('hello/', helloWord.hello, name='hello'),
+    path('', helloWord.index, name=''),
+    path('helloHtml/', helloWord.helloHtml, name='helloHtml'),
+    path('findAllDb/', dbTest.findAllDb, name='helloHtml')
 ]
