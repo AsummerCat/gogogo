@@ -23,5 +23,8 @@ urlpatterns = [
     path('hello/', helloWord.hello, name='hello'),
     path('', helloWord.index, name=''),
     path('helloHtml/', helloWord.helloHtml, name='helloHtml'),
-    path('findAllDb/', dbTest.findAllDb, name='helloHtml')
+    path('findAllDb/', dbTest.findAllDb, name='findAllDb'),
+    path('addAccount/', dbTest.addAccount, name='addAccount'),
+    path('updateAccount/', dbTest.updateAccount, name='updateAccount'),
+    path('delAccount/', dbTest.delAccount, name='delAccount'),
 ]
