@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# orm模型
 import sys
 
 from django.http import HttpResponse
