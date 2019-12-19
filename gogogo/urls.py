@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gogogo import helloWord, dbTest
+from gogogo import helloWord, dbTest, htmlFromTest
 
 urlpatterns = [
     # 路径名称 ,路径方法,路径名称 用来反向显示
@@ -27,4 +27,8 @@ urlpatterns = [
     path('addAccount/', dbTest.addAccount, name='addAccount'),
     path('updateAccount/', dbTest.updateAccount, name='updateAccount'),
     path('delAccount/', dbTest.delAccount, name='delAccount'),
+    path('login/', htmlFromTest.login, name='search-form'),
+    path('search/', htmlFromTest.search, name='search'),
+    path('postLogin/', htmlFromTest.postLogin, name='postLogin'),
+    path('redirectUrl/', htmlFromTest.redirectUrl, name='redirectUrl'),
 ]
