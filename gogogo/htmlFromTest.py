@@ -25,6 +25,9 @@ def postLogin(request):
     ctx = {}
     if request.POST:
         ctx['rlt'] = request.POST['q']
+
+    print(request.META.get("REMOTE_ADDR"))
+
     return render(request, "post.html", ctx)
 
 # 重定向 需要导入 from django.shortcuts import  redirect
