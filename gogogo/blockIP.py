@@ -3,7 +3,9 @@ from django import http
 from django.conf import settings
 from django.utils.deprecation import MiddlewareMixin
 
-
+'''
+黑名单拦截器
+'''
 class BlockedIpMiddleware(MiddlewareMixin):
 
     def process_request(self, request):
