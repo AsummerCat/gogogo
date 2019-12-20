@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gogogo import helloWord, dbTest, htmlFromTest, views
+from gogogo import helloWord, dbTest, htmlFromTest, views,entityFromSumbit
 
 urlpatterns = [
     # 路径名称 ,路径方法,路径名称 用来反向显示
@@ -32,4 +32,5 @@ urlpatterns = [
     path('postLogin/', htmlFromTest.postLogin, name='postLogin'),
     path('redirectUrl/', htmlFromTest.redirectUrl, name='redirectUrl'),
     path('articles/<int:year>/', views.year_archive),
+    path('entityFromSumbit/', entityFromSumbit.entityFromSumbit,name="entityFromSumbit"),
 ]

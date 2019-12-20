@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+ <form action="{%  url 'entityFromSumbit' %}" method="POST">
+        {% csrf_token %}
+         返回的结果: {{ form }}
+        <input type="submit" value="搜索">
+    </form>
+</body>
+</html>
